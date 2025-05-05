@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/catalog.css">
+  <title>MTE-studios Vehicle Catalog</title>
+</head>
+<body>
+  
+  <!-- Catalog Header -->
+  <section class="catalog-header">
+    <h1>Our Vehicle Collection</h1>
+    <p>Find the perfect car for your journey</p>
+  </section>
+  
+  <!-- Filter Section -->
+  <section class="filters">
+    <div class="filter-container">
+      <div class="filter-group">
+        <label for="vehicle-type">Vehicle Type</label>
+        <select id="vehicle-type">
+          <option value="all">All Types</option>
+          <option value="sedan">Sedan</option>
+          <option value="suv">SUV</option>
+          <option value="sports">Sports</option>
+          <option value="luxury">Luxury</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="price-range">Price Range</label>
+        <select id="price-range">
+          <option value="all">All Prices</option>
+          <option value="economy">$50-$100/day</option>
+          <option value="mid-range">$100-$200/day</option>
+          <option value="premium">$200+/day</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="transmission">Transmission</label>
+        <select id="transmission">
+          <option value="all">All</option>
+          <option value="automatic">Automatic</option>
+          <option value="manual">Manual</option>
+        </select>
+      </div>
+      <button class="filter-btn">Apply Filters</button>
+    </div>
+  </section>
+  
+  <!-- Vehicle Catalog -->
+  <section class="vehicle-catalog" id="catalog">
+    <h2>Available Vehicles</h2>
+    <div class="vehicle-grid">
+      <!-- Vehicle 1 -->
+      <div class="vehicle-card" data-type="sedan" data-price="economy">
+        <div class="vehicle-image">
+          <img src="https://avatars.mds.yandex.net/i?id=e9e440d75d6b9aa0429d6cdb858890d39215f9a4-5310863-images-thumbs&n=13" alt="Sedan Car">
+        </div>
+        <div class="vehicle-info">
+          <h3>Toyota Camry 2023</h3>
+          <div class="vehicle-specs">
+            <span><i class="icon">👥</i> 5 seats</span>
+            <span><i class="icon">⛽</i> Hybrid</span>
+            <span><i class="icon">🔄</i> Automatic</span>
+          </div>
+          <div class="vehicle-price">
+            <span class="daily-rate">$75/day</span>
+            <span class="weekly-rate">$450/week</span>
+          </div>
+          <button class="rent-btn">Rent Now</button>
+        </div>
+      </div>
+      
+      <!-- Vehicle 2 -->
+      <div class="vehicle-card" data-type="suv" data-price="mid-range">
+        <div class="vehicle-image">
+          <img src="https://cdnb.artstation.com/p/marketplace/presentation_assets/002/892/185/large/file.jpg?1690559197" alt="SUV Car">
+        </div>
+        <div class="vehicle-info">
+          <h3>Ford Explorer 2023</h3>
+          <div class="vehicle-specs">
+            <span><i class="icon">👥</i> 7 seats</span>
+            <span><i class="icon">⛽</i> Gasoline</span>
+            <span><i class="icon">🔄</i> Automatic</span>
+          </div>
+          <div class="vehicle-price">
+            <span class="daily-rate">$120/day</span>
+            <span class="weekly-rate">$720/week</span>
+          </div>
+          <button class="rent-btn">Rent Now</button>
+        </div>
+      </div>
+      
+      <!-- Vehicle 3 -->
+      <div class="vehicle-card" data-type="sports" data-price="premium">
+        <div class="vehicle-image">
+          <img src="https://ru.superkilometerfilter.com/wp-content/uploads/2022/03/Porsche-991-GT3.jpg" alt="Sports Car">
+        </div>
+        <div class="vehicle-info">
+          <h3>Porsche 911</h3>
+          <div class="vehicle-specs">
+            <span><i class="icon">👥</i> 2 seats</span>
+            <span><i class="icon">⛽</i> Premium</span>
+            <span><i class="icon">🔄</i> Automatic</span>
+          </div>
+          <div class="vehicle-price">
+            <span class="daily-rate">$250/day</span>
+            <span class="weekly-rate">$1,500/week</span>
+          </div>
+          <button class="rent-btn">Rent Now</button>
+        </div>
+      </div>
+      
+      <!-- Vehicle 4 -->
+      <div class="vehicle-card" data-type="luxury" data-price="premium">
+        <div class="vehicle-image">
+          <img src="https://frankfurt.apollo.olxcdn.com/v1/files/n1cms5ynh9f51-UZ/image;s=638x359;q=50" alt="Luxury Car">
+        </div>
+        <div class="vehicle-info">
+          <h3>Mercedes S-Class</h3>
+          <div class="vehicle-specs">
+            <span><i class="icon">👥</i> 5 seats</span>
+            <span><i class="icon">⛽</i> Premium</span>
+            <span><i class="icon">🔄</i> Automatic</span>
+          </div>
+          <div class="vehicle-price">
+            <span class="daily-rate">$300/day</span>
+            <span class="weekly-rate">$1,800/week</span>
+          </div>
+          <button class="rent-btn">Rent Now</button>
+        </div>
+      </div>
+      
+      <!-- Vehicle 5 -->
+      <div class="vehicle-card" data-type="sedan" data-price="economy">
+        <div class="vehicle-image">
+          <img src="https://static.baza.drom.ru/drom/1679301452483_bulletin" alt="Compact Car">
+        </div>
+        <div class="vehicle-info">
+          <h3>Honda Civic 2023</h3>
+          <div class="vehicle-specs">
+            <span><i class="icon">👥</i> 5 seats</span>
+            <span><i class="icon">⛽</i> Gasoline</span>
+            <span><i class="icon">🔄</i> Automatic</span>
+          </div>
+          <div class="vehicle-price">
+            <span class="daily-rate">$65/day</span>
+            <span class="weekly-rate">$390/week</span>
+          </div>
+          <button class="rent-btn">Rent Now</button>
+        </div>
+      </div>
+      
+      <!-- Vehicle 6 -->
+      <div class="vehicle-card" data-type="suv" data-price="mid-range">
+        <div class="vehicle-image">
+          <img src="https://medias.fcacanada.ca/jellies/renditions/2025/800x510/CC25_WLJT74_2TS_PW7_APP_QX8_XXX_XXX.a3de3027c8e942a9b565f8574f67e03f.png" alt="SUV Car">
+        </div>
+        <div class="vehicle-info">
+          <h3>Jeep Grand Cherokee</h3>
+          <div class="vehicle-specs">
+            <span><i class="icon">👥</i> 5 seats</span>
+            <span><i class="icon">⛽</i> Diesel</span>
+            <span><i class="icon">🔄</i> Automatic</span>
+          </div>
+          <div class="vehicle-price">
+            <span class="daily-rate">$110/day</span>
+            <span class="weekly-rate">$660/week</span>
+          </div>
+          <button class="rent-btn">Rent Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p><i class="icon">📞</i> +359 (88) 881 1873</p>
+        <p><i class="icon">✉️</i> DVZarubin24@codingburgas.bg</p>
+        <p><i class="icon">📍</i> 123 Auto Street, Car City, CC 12345</p>
+      </div>
+      <div class="contact-form">
+        <form>
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">FAQ</a>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="icon">📱</i></a>
+        <a href="#"><i class="icon">📘</i></a>
+        <a href="#"><i class="icon">📸</i></a>
+        <a href="#"><i class="icon">🐦</i></a>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2025 MTE-studios. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script src="../js/catalog.js"></script>
+</body>
+</html>
