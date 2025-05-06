@@ -50,8 +50,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  document.querySelector('.close-btn').addEventListener('click', () => {
-    document.getElementById('auth-modal').classList.add('hidden');
+  document.querySelectorAll('.close-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.getElementById('auth-modal').classList.add('hidden');
+      document.getElementById('auth-sign-up').classList.add('hidden');    
+    });
   });
   
   window.addEventListener('click', (e) => {
