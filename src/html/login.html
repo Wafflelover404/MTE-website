@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - MTE-studios</title>
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h1>Welcome Back</h1>
+        <p>Sign in to access your account</p>
+      </div>
+      
+      <form class="auth-form" id="login-form">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        
+        <div class="form-options">
+          <label class="remember-me">
+            <input type="checkbox" name="remember"> Remember me
+          </label>
+          <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+        
+        <button type="submit" class="auth-btn">Sign In</button>
+      </form>
+      
+      <div class="auth-footer">
+        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+      </div>
+      
+      <div class="auth-divider">
+        <span>or continue with</span>
+      </div>
+      
+      <div class="social-auth">
+        <button class="social-btn google">
+          <img src="https://i.pinimg.com/originals/5a/06/d1/5a06d13ce6f2cb06ece9bc45bc9f4d8c.png" alt="Google"> Google
+        </button>
+        <button class="social-btn facebook">
+          <img src="https://static.insales-cdn.com/files/1/5646/16315918/original/facebook_2f1472effd45288e86e37001c8f1b41f.png" alt="Facebook"> Facebook
+        </button>
+      </div>
+    </div>
+    
+    <div class="auth-image">
+      <img src="https://live.staticflickr.com/3869/14729159519_61ae7296ed_b.jpg" alt="Luxury Car">
+      <div class="image-overlay">
+        <h2>MTE-studios Vehicle Rental</h2>
+        <p>Your perfect ride awaits</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/auth.js"></script>
+</body>
+</html>

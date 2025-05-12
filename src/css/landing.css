@@ -161,6 +161,10 @@ body {
     z-index: 0;
 }
 
+article:hover {
+    transform: scale(1.05, 1.05);
+}
+
 .article:hover::before {
     opacity: 0.05;
 }

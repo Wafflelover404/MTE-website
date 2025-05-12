@@ -44,10 +44,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  document.querySelectorAll('.rent-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.getElementById('auth-modal').classList.remove('hidden');
-    });
+    document.querySelectorAll('.rent-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const carname = e.target.closest('.vehicle-card').querySelector('h3').textContent;
+        const price = e.target.closest('.vehicle-card').querySelector('.daily-rate').textContent;
+        const encodedCarname = encodeURIComponent(carname);
+        const encodedPrice = encodeURIComponent(price);
+        location.href = `payment.html?carname=${encodedCarname}&price=${encodedPrice}`;
+        // Passing params here to the payment page. Unsafe, but works for now as UI only implementation
+      });
   });
   
   document.querySelectorAll('.close-btn').forEach(btn => {
@@ -73,3 +78,67 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('auth-sign-up').classList.add('hidden');
   });
   
+  document.querySelectorAll('.more-info-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const expandedContent = button.nextElementSibling;
+      const vehicleCard = button.closest('.vehicle-card');
+      
+      expandedContent.classList.toggle('active');
+      vehicleCard.classList.toggle('expanded');
+      
+      button.textContent = expandedContent.classList.contains('active') 
+        ? 'Show Less ▲' 
+        : 'Read More ▼';
+    });
+  });
+
+      // Add these new JavaScript handlers
+      document.addEventListener('DOMContentLoaded', function() {
+        const authButtons = document.querySelector('.auth-buttons');
+        const accountInfo = document.querySelector('.account-info');
+        const logoutBtn = document.getElementById('logout-btn');
+        
+        // Mock login state
+        let isLoggedIn = false;
+  
+        // Show auth buttons or account info
+        function updateAuthState() {
+          if(isLoggedIn) {
+            authButtons.classList.add('hidden');
+            accountInfo.classList.remove('hidden');
+          } else {
+            authButtons.classList.remove('hidden');
+            accountInfo.classList.add('hidden');
+          }
+        }
+  
+        // Login handlers
+        document.getElementById('sign-in-btn').addEventListener('click', () => {
+          document.getElementById('auth-modal').classList.remove('hidden');
+        });
+  
+        document.getElementById('sign-up-btn').addEventListener('click', () => {
+          document.getElementById('auth-sign-up').classList.remove('hidden');
+        });
+  
+        // Logout handler
+        logoutBtn.addEventListener('click', () => {
+          isLoggedIn = false;
+          updateAuthState();
+        });
+  
+        // Mock login submission
+        document.getElementById('submit-log-in').addEventListener('click', (e) => {
+          e.preventDefault();
+          isLoggedIn = true;
+          updateAuthState();
+          document.getElementById('auth-modal').classList.add('hidden');
+        });
+  
+        document.getElementById('submit-sign-up').addEventListener('click', (e) => {
+          e.preventDefault();
+          isLoggedIn = true;
+          updateAuthState();
+          document.getElementById('auth-sign-up').classList.add('hidden');
+        });
+      });

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTE-studios - Checkout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../css/payment.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <!--
+    <nav class="nav-topper">
+        <div class="navbar">
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/inventory">Inventory</a></li>
+                <li><a href="/checkout" class="active">Checkout</a></li>
+            </ul>
+        </div>
+    </nav> -->
+
+    <!-- Checkout Container -->
+    <div class="landing" style="min-height: auto; padding: 4rem 2rem;">
+        <div class="content" style="margin: 2rem auto;">
+            <h3 style="margin-bottom: 3rem;">Complete Your Purchase</h3>
+            
+            <div class="checkout-container">
+                <!-- Checkout Form -->
+                <form id="checkoutForm" class="checkout-form">
+                    <div class="form-section">
+                        <h4 class="section-title">Customer Information</h4>
+                        <div class="input-group">
+                            <input type="text" id="fullName" required>
+                            <label for="fullName">Full Name</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" required>
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="tel" id="phone" required>
+                            <label for="phone">Phone Number</label>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4 class="section-title">Payment Details</h4>
+                        <div class="input-group">
+                            <input type="text" id="cardNumber" required>
+                            <label for="cardNumber">Card Number</label>
+                        </div>
+                        <div class="row">
+                            <div class="input-group">
+                                <input type="text" id="expDate" placeholder="MM/YY" required>
+                                <label for="expDate">Expiration Date</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="cvc" required>
+                                <label for="cvc">CVC</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4 class="section-title">Shipping Address</h4>
+                        <div class="input-group">
+                            <textarea id="address" rows="3" required></textarea>
+                            <label for="address">Delivery Address</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%; justify-content: center;">
+                        Complete Purchase ($84,500)
+                    </button>
+                </form>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h4 class="section-title">Your Selection</h4>
+                    <div class="cart-items">
+                        <div class="cart-item">
+                            <div class="car-image" style="background-image: url('car-image.jpg')"></div>
+                            <div class="car-details">
+                                <h5>2024 Porsche 911 GT3 RS</h5>
+                                <p class="price">$82,500</p>
+                                <div class="car-meta">
+                                    <span>1 x Vehicle</span>
+                                    <span>Delivery: $2,000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="total-summary">
+                        <div class="total-row">
+                            <span>Subtotal</span>
+                            <span>$82,500</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Delivery</span>
+                            <span>$2,000</span>
+                        </div>
+                        <div class="total-row grand-total">
+                            <span>Total</span>
+                            <span>$84,500</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/payment.js"></script>
+</body>
+</html>
